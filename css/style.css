@@ -1,0 +1,197 @@
+/* Reveal Animation */
+.reveal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.reveal-panel {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    background-image: url('../images/opening.jpg');
+    transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.reveal-panel.top {
+    top: 0;
+}
+
+.reveal-panel.bottom {
+    bottom: 0;
+}
+
+body.reveal-animation .reveal-panel.top {
+    transform: translateY(-100%);
+}
+
+body.reveal-animation .reveal-panel.bottom {
+    transform: translateY(100%);
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Pacifico', cursive;
+    color: #ff69b4; /* Hot Pink */
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #fa83bf;
+}
+
+header {
+    background-color: #ffb6c1; /* Light Pink */
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 2px solid #ff69b4;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000;
+    text-align: center;
+    
+}
+
+.products {
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid #ffb6c1;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.product-card h3 {
+    margin-top: 0;
+}
+
+button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff1493; /* Deep Pink */
+}
+
+.about {
+    background-color: #ffebf0;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+footer {
+    background-color: #ffb6c1;
+    color: #333;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: 2px solid #ff69b4;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-float .fa-whatsapp {
+    margin-top: 13px;
+    font-size: 35px;
+}
